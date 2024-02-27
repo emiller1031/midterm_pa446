@@ -20,6 +20,7 @@ Think of a civic problem you would like to address by creating a data applicatio
 Include the source code and output in your final Quarto document when answering this question. Load the data file called ‘cell.csv’
 
 ```{r}
+#| label: Set-up
 #| warning: false
 # load libraries
 library(tidyverse)
@@ -34,6 +35,7 @@ cell <- read_csv("./cell.csv")
 -   Of the states with a texting ban, which one has the highest number of traffic deaths?
 
 ```{r}
+#| label: Texting Ban Deaths
 cell %>%
   filter(text_ban == 1) %>%
   filter(numberofdeaths == max(numberofdeaths))
@@ -45,6 +47,7 @@ cell %>%
 
 ```{r}
 #| warning: false
+#| label: Cell ban and texting ban
 
 cell %>%
   filter(text_ban == 1) %>%
@@ -66,6 +69,7 @@ cell %>%
 
 ```{r}
 #| warning: false
+#| label: Average number of deaths
 
 cell %>%
   filter(text_ban == 1) %>%
@@ -81,6 +85,9 @@ cell %>%
 -   Plot the relationship between population and the number of traffic deaths for those with and without a cell ban on the same plot.
 
 ```{r, fig.width = 8, fig.height=12}
+#| label: Plotting
+
+
 cell %>%
   group_by(cell_ban) %>%
   mutate(cell_ban = factor(cell_ban,
@@ -105,6 +112,9 @@ cell %>%
 Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have selected “Market Open” from the three options given at the start/top of this page. Extract data from the “Today’s hot stocks” section and create a table comprising six variables (Stock Name, Company Name, Price, Change, % Change, and Volume). The table should include all stocks listed in the “Today’s hot stocks” section. Ideally, the table will have six columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document
 
 ```{r}
+#| label: HTML Scraping
+
+
 url <- "https://www.cnn.com/markets/"
 html <- read_html(url)
 
