@@ -32,7 +32,6 @@ cell <- read_csv("./cell.csv")
 -   Of the states with a texting ban, which one has the highest number of traffic deaths?
 
 ```{r}
-
 cell %>%
   filter(text_ban == 1) %>%
   filter(numberofdeaths == max(numberofdeaths))
@@ -62,6 +61,22 @@ cell %>%
 | Answer: 10 have a cell ban, 34 have a texting ban, and 10 have both.
 
 -   What is the average number of deaths in states with a texting ban versus those without?
+
+```{r}
+#| warning: false
+
+cell %>%
+  filter(text_ban == 1) %>%
+  summarize(mean(numberofdeaths))
+
+cell %>%
+  filter(text_ban == 0) %>%
+  summarize(mean(numberofdeaths))
+```
+
+| The average number of traffic deaths is 567 for states with texting bans, and 892 for states without texting bans.
+
+-   Plot the relationship between population and the number of traffic deaths for those with and without a cell ban on the same plot.
 
 ```{r}
 
