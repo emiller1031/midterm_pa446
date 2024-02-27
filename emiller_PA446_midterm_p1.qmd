@@ -24,6 +24,7 @@ Include the source code and output in your final Quarto document when answering 
 # load libraries
 library(tidyverse)
 library(usethis)
+library(ggthemes)
 
 # read csv
 cell <- read_csv("./cell.csv")
@@ -78,8 +79,24 @@ cell %>%
 
 -   Plot the relationship between population and the number of traffic deaths for those with and without a cell ban on the same plot.
 
-```{r}
-
+```{r, fig.width = 8, fig.height=12}
+cell %>%
+  group_by(cell_ban) %>%
+  mutate(cell_ban = factor(cell_ban,
+                           levels = c(0,1),
+                           labels = c("No Cell Ban", "Cell Ban")))%>%
+  ggplot() +
+  geom_col(mapping = aes(x = state, y = numberofdeaths,
+                         fill = cell_ban),
+           position = position_dodge(0.8)) +
+  scale_fill_manual(values = c("No Cell Ban" = "coral4",
+                               "Cell Ban" = "darkolivegreen")) +
+  labs(title = "Comparing Traffic Deaths \nin States With and \nWithout Cell Phone Bans",
+       x = "State",
+       y = "Number of Traffic Deaths",
+       fill = "") +
+  coord_flip() +
+  theme_wsj()
 ```
 
 ## Question 3
