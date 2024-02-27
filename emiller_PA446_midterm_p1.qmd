@@ -1,0 +1,49 @@
+---
+title: "PA446 Midterm"
+author: "Elizabeth Miller"
+format: pdf
+editor: visual
+---
+
+# Part I
+
+## Question 1
+
+Think of a civic problem you would like to address by creating a data application. Include the following in your answer:
+
+1.  Describe the civic problem and its implications for the community. Be as specific as possible.
+
+2.  Briefly describe the data application that can help address the civic problem defined in (a).
+
+## Question 2
+
+Include the source code and output in your final Quarto document when answering this question. Load the data file called ‘cell.csv’
+
+```{r}
+# load libraries
+library(tidyverse)
+library(usethis)
+
+# read csv
+cell <- read_csv("./cell.csv")
+```
+
+-   Of the states with a texting ban, which one has the highest number of traffic deaths?
+
+```{r}
+cell %>%
+  filter(text_ban == 1) %>%
+  filter(numberofdeaths == max(numberofdeaths))
+```
+
+| Answer: California
+
+-   How many states have a cell ban, how many have a texting ban, and how many have both?
+
+## Question 3
+
+Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have selected “Market Open” from the three options given at the start/top of this page. Extract data from the “Today’s hot stocks” section and create a table comprising six variables (Stock Name, Company Name, Price, Change, % Change, and Volume). The table should include all stocks listed in the “Today’s hot stocks” section. Ideally, the table will have six columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document
+
+# Part II
+
+Link to webpage
