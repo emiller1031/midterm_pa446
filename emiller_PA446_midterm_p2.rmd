@@ -1,0 +1,12 @@
+---
+title: 'PA446 Midterm: Part II'
+author: "Elizabeth Miller"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Resume
