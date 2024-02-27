@@ -25,6 +25,7 @@ Include the source code and output in your final Quarto document when answering 
 library(tidyverse)
 library(usethis)
 library(ggthemes)
+library(rvest)
 
 # read csv
 cell <- read_csv("./cell.csv")
@@ -102,6 +103,31 @@ cell %>%
 ## Question 3
 
 Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have selected “Market Open” from the three options given at the start/top of this page. Extract data from the “Today’s hot stocks” section and create a table comprising six variables (Stock Name, Company Name, Price, Change, % Change, and Volume). The table should include all stocks listed in the “Today’s hot stocks” section. Ideally, the table will have six columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document
+
+```{r}
+url <- "https://www.cnn.com/markets/"
+html <- read_html(url)
+
+html |>
+  html_elements("basic-table__link-B1P_UJ cnn-pcl-fyz6fg") |> html_text2() # ticker
+
+html |>
+  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # name
+
+html |>
+  html_elements(".basic-table__price-16Duv7 cnn-pcl-fyz6fg") |> html_text2() # price
+
+html |>
+  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # change
+
+html |>
+  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # percent change
+
+html |>
+  html_elements(".basic-table__volume-3V90t3 content-lOZFzp cnn-pcl-fyz6fg") |> html_text2() # volume
+
+
+```
 
 # Part II
 
