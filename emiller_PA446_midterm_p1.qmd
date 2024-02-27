@@ -19,7 +19,8 @@ Think of a civic problem you would like to address by creating a data applicatio
 
 Include the source code and output in your final Quarto document when answering this question. Load the data file called ‘cell.csv’
 
-```{r, results='hide'}
+```{r}
+#| warning: false
 # load libraries
 library(tidyverse)
 library(usethis)
@@ -31,6 +32,7 @@ cell <- read_csv("./cell.csv")
 -   Of the states with a texting ban, which one has the highest number of traffic deaths?
 
 ```{r}
+
 cell %>%
   filter(text_ban == 1) %>%
   filter(numberofdeaths == max(numberofdeaths))
@@ -40,7 +42,8 @@ cell %>%
 
 -   How many states have a cell ban, how many have a texting ban, and how many have both?
 
-```{r} 
+```{r}
+#| warning: false
 
 cell %>%
   filter(text_ban == 1) %>%
@@ -58,13 +61,11 @@ cell %>%
 
 | Answer: 10 have a cell ban, 34 have a texting ban, and 10 have both.
 
+-   What is the average number of deaths in states with a texting ban versus those without?
 
--   What is the average number of deaths in states with a texting ban versus those
-    without?
 ```{r}
 
 ```
-
 
 ## Question 3
 
