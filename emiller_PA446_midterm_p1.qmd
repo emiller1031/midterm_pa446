@@ -13,7 +13,13 @@ Think of a civic problem you would like to address by creating a data applicatio
 
 1.  Describe the civic problem and its implications for the community. Be as specific as possible.
 
-2.  Briefly describe the data application that can help address the civic problem defined in (a).
+    Land use and zoning policies in the United States
+
+2.  Briefly describe the data application that can help address the civic problem defined in (1).
+
+    The application will function
+
+    The application will address the issue described in part 1 of the question by
 
 ## Question 2
 
