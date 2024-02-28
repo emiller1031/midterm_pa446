@@ -10,6 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```
 
+|                                    |                |                                  |
+|------------------------------------|----------------|----------------------------------|
+| elizabethelainemiller98\@gmail.com | (828) 702-8443 | <https://github.com/emiller1031> |
+
 # Work Experience
 
 #### Geographic Information Systems Intern [(June 2023 - Present)]{.smallcaps}
@@ -56,6 +60,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -   Coordinated community engagement events and feedback sessions
 
+------------------------------------------------------------------------
+
 # Education
 
 #### Master of Urban Planning and Policy [(Expected May 2024)]{.smallcaps}
@@ -73,6 +79,8 @@ knitr::opts_chunk$set(echo = TRUE)
 -   Coursework in GIS, environmental studies, calculus, and digital art
 
 -   Phi Beta Kappa Honor Society Inductee \| GPA: 3.87
+
+------------------------------------------------------------------------
 
 # Proficiencies
 
