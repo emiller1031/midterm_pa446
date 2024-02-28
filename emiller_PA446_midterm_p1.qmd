@@ -114,10 +114,20 @@ Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have
 ```{r}
 #| label: HTML Scraping
 
-
 url <- "https://www.nytimes.com/topic/subject/elections"
 html <- read_html(url)
 
+
+title <- html |>
+  html_elements(".css-8hzhxf") |> html_text2() # title
+
+descrip <- html |>
+  html_element(".css-1pga48a.e15t083i1") |> html_text2() # description
+
+authorname <- html |>
+  html_elements(".css-1n7hynb") |> html_text2() # author name
+
+# Build the tibble
 
 ```
 
