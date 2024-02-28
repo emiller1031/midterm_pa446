@@ -15,6 +15,8 @@ Think of a civic problem you would like to address by creating a data applicatio
 
     Land use and zoning policies in the United States
 
+    public comment?
+
 2.  Briefly describe the data application that can help address the civic problem defined in (1).
 
     The application will function
@@ -137,7 +139,7 @@ descrip <- html %>%
   html_text2()
 
 authorname <- html |>
-  html_elements(".css-1n7hynb") |> 
+  html_elements(".css-1i4y2t3.e140qd2t0") |> 
   html_text2() # author name
 
 # Build the tibble
