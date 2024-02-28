@@ -115,28 +115,13 @@ Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have
 #| label: HTML Scraping
 
 
-url <- "https://www.cnn.com/markets/"
+url <- "https://www.nytimes.com/topic/subject/elections"
 html <- read_html(url)
 
-html |>
-  html_elements("basic-table__link-B1P_UJ cnn-pcl-fyz6fg") |> html_text2() # ticker
 
-html |>
-  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # name
+```
 
-html |>
-  html_elements(".basic-table__price-16Duv7 cnn-pcl-fyz6fg") |> html_text2() # price
-
-html |>
-  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # change
-
-html |>
-  html_elements(".cnn-pcl-fyz6fg") |> html_text2() # percent change
-
-html |>
-  html_elements(".basic-table__volume-3V90t3 content-lOZFzp cnn-pcl-fyz6fg") |> html_text2() # volume
-
-
+```{}
 ```
 
 # Part II
