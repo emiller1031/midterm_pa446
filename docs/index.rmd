@@ -2,7 +2,9 @@
 title: 'Resume'
 author: "Elizabeth Miller"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document:
+    theme: journal
 ---
 
 ```{r setup, include=FALSE}
@@ -11,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 |                                    |                |                                  |
-|------------------------------------|----------------|----------------------------------|
+|----------------------------|-----------------|---------------------------|
 | elizabethelainemiller98\@gmail.com | (828) 702-8443 | <https://github.com/emiller1031> |
 
 # Work Experience
