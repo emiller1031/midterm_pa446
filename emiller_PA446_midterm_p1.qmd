@@ -141,4 +141,4 @@ html |>
 
 # Part II
 
-Link to webpage
+Link to webpage with CV: <https://emiller1031.github.io/midterm_pa446/>
