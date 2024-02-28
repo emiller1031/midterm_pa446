@@ -1,5 +1,5 @@
 ---
-title: 'PA446 Midterm: Part II'
+title: 'Resume'
 author: "Elizabeth Miller"
 date: "`r Sys.Date()`"
 output: html_document
@@ -8,15 +8,72 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("vitae")
-library(vitae)
-
-remotes::install_github('mitchelloharawild/icons@v0.1.0')
-devtools::install_github("nstrayer/datadrivencv")
 ```
 
-# Resume
-```{r}
-?datadrivencv::use_datadriven_cv
-```
+# Work Experience
 
+#### Geographic Information Systems Intern [(June 2023 - Present)]{.smallcaps}
+
+##### *Chicago Metropolitan Agency for Planning \| Chicago, IL*
+
+-   Expedite data processing through automation using ArcPy to produce data informing regional forecasts
+
+-   Update and clean land use and zoning geospatial datasets using ArcMap for internal and external use to guide land use planning
+
+-   Conduct existing conditions research and produce maps using ArcGIS Pro for a corridor plan
+
+-   Support quality assurance and quality control processes for geospatial datasets
+
+#### Geographic Information Systems Teaching Assistant [(August 2022 - Present)]{.smallcaps}
+
+##### *Urban Data Visualization Lab, University of Illinois Chicago College of Urban Planning and Public Affairs \| Chicago, IL*
+
+-   Assist with GIS tutorials for 7 UIC courses and professional trainings and grade coursework over the course of 4 semesters
+
+-   Advise undergraduate and graduate students on geospatial visualization and analysis projects
+
+-   Manage UDVL website using WordPress
+
+-   Give lectures and demonstrations using Illustrator, ArcGIS Pro, and ArcGIS Online
+
+#### Lead for North Carolina Fellow [(August 2021 - June 2022)]{.smallcaps}
+
+##### *County of Hyde \| Swan Quarter, NC*
+
+-   Administered \$100,000 grant to provide urgent housing repairs to 10 low-income households with elderly or disabled members, ensuring timely and compliant completion of project to maintain county eligibility for program
+
+-   Served as staff liaison to Ocracoke Planning Advisory Board and Board of Adjustments
+
+-   Wrote updates to Code of Ordinances based on community feedback and presented proposed changes to the Hyde County Board of Commissioners
+
+#### Davidson Impact Fellow ([July 2020 - June 2021]{.smallcaps})
+
+##### *Arts & Science Council \| Charlotte, NC*
+
+-   Collaborated on the design, management, and execution of CARES grants to distribute over \$1,000,000 to over 50 arts and cultural organizations and 123 individual creatives
+
+-   Co-authored organization’s cultural equity report and served on a cultural equity working group
+
+-   Coordinated community engagement events and feedback sessions
+
+# Education
+
+#### Master of Urban Planning and Policy [(Expected May 2024)]{.smallcaps}
+
+##### *University of Illinois Chicago, College of Urban Planning and Public Affairs \| Chicago, IL*
+
+-   Coursework in GIS, R, Illustrator, InDesign, SketchUp, planning for climate change, spatial design, and plan-making
+
+-   GPA: 4.0
+
+#### Bachelor of Arts in Environmental Studies [(May 2020)]{.smallcaps}
+
+##### *Davidson College \| Davidson, NC*
+
+-   Coursework in GIS, environmental studies, calculus, and digital art
+
+-   Phi Beta Kappa Honor Society Inductee \| GPA: 3.87
+
+# Proficiencies
+
+[ArcGIS (Network Analyst, Spatial Analyst, ArcGIS Online) \| R \| InDesign \| Illustrator \| Photoshop \| SketchUp]{.smallcaps}
