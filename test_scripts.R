@@ -11,8 +11,12 @@ html |>
   html_element(".css-1pga48a e15t083i1") |> html_text2() # description
 
 html |>
-  html_element(".css-1wj8chu") |> html_text2() # date
+  html_element("span") |> html_text2() # date
 
 html |>
   html_elements(".css-1n7hynb") |> html_text2() # author name
 
+
+
+html |>
+       html_elements("p.css-1pga48a.e15t083i1") |> html_text2()
