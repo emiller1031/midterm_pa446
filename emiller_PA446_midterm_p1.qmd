@@ -109,7 +109,8 @@ cell %>%
            position = position_dodge(0.8)) +
   scale_fill_manual(values = c("No Cell Ban" = "coral4",
                                "Cell Ban" = "darkolivegreen")) +
-  labs(title = "Comparing Traffic Deaths \nin States With and \nWithout Cell Phone Bans",
+  labs(title = "Comparing Traffic Deaths \nin States With and 
+       \nWithout Cell Phone Bans \nWhile Driving",
        x = "State",
        y = "Number of Traffic Deaths",
        fill = "") +
@@ -121,7 +122,7 @@ cell %>%
 
 Go to the web link https://www.nytimes.com/topic/subject/elections. Extract data from the “Latest” section and create a table comprising three variables (Article Name, Article Description (the short text after the title), and Author Name). Extract information on at least ten articles. Ideally, the table will have three columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document.
 
-```{r}
+```{r, paged.print=FALSE}
 #| label: HTML Scraping
 
 url <- "https://www.nytimes.com/topic/subject/elections"
@@ -147,16 +148,21 @@ authorname <- html |>
 # Build the tibble
 nyttable <- tibble(title, authorname, descrip)
 
-# format table
+# i tried using gt() but it got cut off in the rendered pdf
 nyttable %>%
   gt() %>%
-  cols_label(
-    title = "Article Title",
-    authorname = "Author",
-    descrip = "Article Description"
-  ) %>%
+  cols_label(title = "Article Table",
+             authorname = "Author Name",
+             descrip = "Description") %>%
   tab_source_note(source_note = md("*Source: New York Times*")) %>%
-  tab_options(column_labels.background.color = "skyblue")
+  tab_options(column_labels.background.color = "skyblue") %>%
+  as_raw_html()
+  
+
+# this is the only way i could get the tibble to show up in my output
+# but unfortunately the entries get cut off
+as_tibble(nyttable)
+
 
 ```
 
