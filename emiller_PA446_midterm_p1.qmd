@@ -144,6 +144,7 @@ authorname <- html |>
 
 # Build the tibble
 nyttable <- tibble(title, authorname, descrip)
+
 ```
 
 # Part II
