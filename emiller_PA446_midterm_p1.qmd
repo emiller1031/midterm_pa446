@@ -13,15 +13,27 @@ Think of a civic problem you would like to address by creating a data applicatio
 
 1.  Describe the civic problem and its implications for the community. Be as specific as possible.
 
-    Land use and zoning policies in the United States
+    Land use and zoning policies are foundational to people’s experiences of where they live, work, and play, but are often obscured by complicated and inaccessible bureaucratic processes. Thus, it is difficult for people to know when zoning changes or new developments are occurring in their neighborhoods. This is an issue because zoning can be an insidious tool that perpetuates segregation, environmental racism, exclusionary housing policies, car-centric development, and climactic harm. 
 
-    public comment?
+    Zoning and land use decisions have historically been leveraged to concentrate locally unwanted land uses, or LULUs, in predominantly Black and Latino/a/x neighborhoods. Examples of LULUs could be a trash incinerator or other heavy polluting industry. This has implications for the health and well-being of the residents of the adjacent neighborhoods. In Chicago, there is a high concentration of “sacrifice zones” – or areas that bear “the brunt of pollution from industrial activity and other polluting sources” (Campa 2023). The City of Chicago has the largest life expectancy gap among American cities, in part because of the ongoing placement of polluting industries in the same predominantly Black and Latino/a/x areas (Campa 2023).
+
+    Further, after desegregation, municipalities used zoning to perpetuate segregation through exclusionary zoning policies. By prohibiting the construction of multi-family housing, cities prevented racially and economically diverse neighborhoods from proliferating.
+
+    Despite this history of zoning decisions perpetuating systemic racism and environmental degradation, zoning is a tool that can be used to overhaul the urban fabric. Equitable transit-oriented development can be encouraged through zoning policies that encourage the development of high-density, mixed-uses around public transit hubs. This type of zoning policy also encourages walkability, which promotes better health outcomes for residents and decreases car dependency, which is better for the environment.
+
+    If people are uninformed about the zoning districts and policies around them, then they are not able to hold city officials accountable. They might learn of a new undesirable land use when it is too late to intervene. This can be a matter of life and death in sacrifice zones.
 
 2.  Briefly describe the data application that can help address the civic problem defined in (1).
 
-    The application will function
+    Generally, the data application would be used by residents of a locale. They could enter the name of their neighborhood into the application, and the application would provide pertinent zoning and development concerns in the neighborhood. This would include basic zoning information, like the existing permissible uses by zoning districts in the neighborhood. The application would also provide building permit applications, upcoming zoning board of appeals (ZBA) meetings, the agendas for these meetings, information on participating in public comment sessions, and other resources about zoning based on the neighborhood in which one resides. The application could also provide historical context on the neighborhood, including redlining maps, previous zoning codes, and explanatory text on the harms zoning has wrought previously. There would also be a mapping component of the application, where proposed or under construction developments could be displayed. Users would also be able to enter points onto the map if the application does not have the new developments in its database. The application could also provide a draft email to send to their alderperson or ZBA members regarding proposed zoning changes or new developments.
 
-    The application will address the issue described in part 1 of the question by
+    This would help to address the problem described previously by demystifying the zoning process while also calling attention to how critical it is to be informed about zoning and land use matters. It would educate residents on ways to advocate for themselves, why certain zoning policies are harmful, and alternative zoning policies. This could empower residents to advocate for themselves. It would also assist the city with soliciting feedback from residents, which is a best practice in urban planning. Ideally, this would lead to more democratic zoning and land use decisions. This could also help build trust between residents and the city by increasing transparency.
+
+References:
+
+Campa, Aydali. 2023. “Chicago Looks to Overhaul Its Zoning and Land Use Policies to Address Environmental Discrimination.” *Inside Climate News* (blog). August 15, 2023. <https://insideclimatenews.org/news/15082023/chicago-environmental-justice-zoning-policies-pollution-cumulative-impact/>.
+
+------------------------------------------------------------------------
 
 ## Question 2
 
@@ -118,6 +130,8 @@ cell %>%
   theme_wsj()
 ```
 
+------------------------------------------------------------------------
+
 ## Question 3
 
 Go to the web link https://www.nytimes.com/topic/subject/elections. Extract data from the “Latest” section and create a table comprising three variables (Article Name, Article Description (the short text after the title), and Author Name). Extract information on at least ten articles. Ideally, the table will have three columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document.
@@ -165,6 +179,8 @@ as_tibble(nyttable)
 
 
 ```
+
+------------------------------------------------------------------------
 
 # Part II
 
