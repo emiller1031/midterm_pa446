@@ -35,6 +35,8 @@ library(tidyverse)
 library(usethis)
 library(ggthemes)
 library(rvest)
+library(gt)
+library(gtExtras)
 
 # read csv
 cell <- read_csv("./cell.csv")
@@ -117,7 +119,7 @@ cell %>%
 
 ## Question 3
 
-Go to the web link https://money.cnn.com/data/us_markets/ and make sure you have selected “Market Open” from the three options given at the start/top of this page. Extract data from the “Today’s hot stocks” section and create a table comprising six variables (Stock Name, Company Name, Price, Change, % Change, and Volume). The table should include all stocks listed in the “Today’s hot stocks” section. Ideally, the table will have six columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document
+Go to the web link https://www.nytimes.com/topic/subject/elections. Extract data from the “Latest” section and create a table comprising three variables (Article Name, Article Description (the short text after the title), and Author Name). Extract information on at least ten articles. Ideally, the table will have three columns and at least ten rows. Make sure to include both the source code and output in your final Quarto document.
 
 ```{r}
 #| label: HTML Scraping
@@ -145,8 +147,21 @@ authorname <- html |>
 # Build the tibble
 nyttable <- tibble(title, authorname, descrip)
 
+# format table
+nyttable %>%
+  gt() %>%
+  cols_label(
+    title = "Article Title",
+    authorname = "Author",
+    descrip = "Article Description"
+  ) %>%
+  tab_source_note(source_note = md("*Source: New York Times*")) %>%
+  tab_options(column_labels.background.color = "skyblue")
+
 ```
 
 # Part II
 
 Link to webpage with CV: <https://emiller1031.github.io/midterm_pa446/>
+
+Link to GitHub repo for midterm: <https://github.com/emiller1031/midterm_pa446>
